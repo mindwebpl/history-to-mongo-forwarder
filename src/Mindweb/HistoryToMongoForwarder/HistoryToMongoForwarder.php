@@ -3,6 +3,7 @@ namespace Mindweb\HistoryToMongoForwarder;
 
 use MongoClient;
 use Mindweb\Forwarder;
+use MongoDate;
 
 class HistoryToMongoForwarder implements Forwarder\Forwarder
 {
@@ -10,6 +11,11 @@ class HistoryToMongoForwarder implements Forwarder\Forwarder
      * @var \MongoCollection
      */
     private $collection;
+
+    /**
+     * @var array
+     */
+    private $dateColumns;
 
     /**
      * @param array $configuration
@@ -44,6 +50,10 @@ class HistoryToMongoForwarder implements Forwarder\Forwarder
             $db,
             $collection
         );
+
+        $this->dateColumns = !empty($configuration['dateColumns']) ? $configuration['dateColumns'] : array(
+            'UTCTimestamp' => true
+        );
     }
 
     /**
@@ -52,6 +62,10 @@ class HistoryToMongoForwarder implements Forwarder\Forwarder
      */
     public function forward(array $data)
     {
+        foreach ($this->dateColumns as $column => $isUTC) {
+            $data[$column] = new MongoDate(strtotime($data[$column] . ($isUTC ? ' UTC' : '')));
+        }
+
         $this->collection->insert($data);
     }
 } 
