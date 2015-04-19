@@ -1,0 +1,52 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "4d31b2ad076207ef25c52967026d2da0",
+    "packages": [
+        {
+            "name": "mindweb/forwarder",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mindwebpl/forwarder.git",
+                "reference": "328208ae35c95817e8c3b76096a554ba66327f7a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mindwebpl/forwarder/zipball/328208ae35c95817e8c3b76096a554ba66327f7a",
+                "reference": "328208ae35c95817e8c3b76096a554ba66327f7a",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Mindweb\\Forwarder\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marcin Czołnowski",
+                    "email": "marcin@czolnowski.net"
+                }
+            ],
+            "time": "2015-04-19 16:17:51"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "mindweb/forwarder": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

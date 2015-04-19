@@ -1,0 +1,20 @@
+{
+    "name": "mindweb/history-to-mongo-forwarder",
+    "description": "",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marcin Czołnowski",
+            "email": "marcin@czolnowski.net"
+        }
+    ],
+    "require": {
+        "mindweb/forwarder": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "Mindweb\\HistoryToMongoForwarder\\": "src"
+        }
+    }
+}
