@@ -2,8 +2,9 @@
 namespace Mindweb\HistoryToMongoForwarder;
 
 use MongoClient;
+use Mindweb\Forwarder;
 
-class HistoryToMongoForwarder
+class HistoryToMongoForwarder implements Forwarder\Forwarder
 {
     /**
      * @var \MongoCollection
